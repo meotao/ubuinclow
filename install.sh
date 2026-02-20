@@ -1,4 +1,3 @@
-cat << 'EOF' > install.sh
 #!/bin/bash
 set -e
 
@@ -44,7 +43,6 @@ openclaw config set channels.feishu.dmPolicy "open"
 openclaw config set channels.feishu.allowFrom '["*"]' --json
 openclaw config set providers.google.apiKey "$GEMINI_API_KEY"
 
-# 使用 Node.js 脚本精准修改默认模型，避开命令行校验坑
 node -e "
 const fs = require('fs');
 const file = require('os').homedir() + '/.openclaw/openclaw.json';
@@ -78,7 +76,3 @@ systemctl --user enable --now openclaw-gateway.service
 sudo loginctl enable-linger $USER
 
 echo -e "\n🎉 部署彻底完成！服务已在后台静默运行。"
-EOF
-
-chmod +x install.sh
-./install.sh
