@@ -3,9 +3,9 @@ set -e
 
 echo -e "\n=== OpenClaw 全自动部署脚本 ===\n"
 
-read -p "请输入飞书 App ID (例 cli_xxx): " FEISHU_APP_ID
-read -p "请输入飞书 App Secret: " FEISHU_APP_SECRET
-read -p "请输入 Gemini API Key (例 AIza...): " GEMINI_API_KEY
+read -p "请输入飞书 App ID (例 cli_xxx): " FEISHU_APP_ID < /dev/tty
+read -p "请输入飞书 App Secret: " FEISHU_APP_SECRET < /dev/tty
+read -p "请输入 Gemini API Key (例 AIza...): " GEMINI_API_KEY < /dev/tty
 
 echo -e "\n⏳ 信息收集完毕，开始自动配置...\n"
 
