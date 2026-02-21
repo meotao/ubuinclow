@@ -58,7 +58,7 @@ sudo npm cache clean --force
 # 3. 安装 OpenClaw 核心
 # ---------------------------------------------------------
 echo ">>> [3/8] 正在全局安装 OpenClaw (涉及源码编译，请耐心等待)..."
-sudo npm install -g @qingchencloud/openclaw-zh@latest
+sudo npm install -g openclaw@latest
 
 # ---------------------------------------------------------
 # 4. 局部安装并修复飞书插件
